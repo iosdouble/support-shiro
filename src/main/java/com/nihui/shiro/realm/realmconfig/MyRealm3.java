@@ -9,10 +9,10 @@ import org.apache.shiro.realm.Realm;
  * @Date 2019/10/28 2:02 PM
  * @Created by nihui
  */
-public class MyRealm1 implements Realm {
+public class MyRealm3 implements Realm {
 
     public String getName() {
-        return "myrealm1";
+        return "myrealm3";
     }
     public boolean supports(AuthenticationToken token) {
         //仅仅支持一个UsernamePaasswordToke
@@ -31,6 +31,7 @@ public class MyRealm1 implements Realm {
             throw new IncorrectCredentialsException();
         }
         //如果身份认证验证成功，返回一个AuthenticationInfo
+        username = "test@163.com";
         return new SimpleAuthenticationInfo(username,password,getName());
     }
 }

@@ -22,11 +22,11 @@ public class MyRealm2 implements Realm {
         //获取到用户名和密码
         String username = (String) token.getPrincipal();
         String password = new String((char[]) token.getCredentials());
-        if (!"nihui".equals(username)){
+        if (!"admin".equals(username)){
             //用户名错误
             throw new UnknownAccountException();
         }
-        if (!"1234".equals(password)){
+        if (!"123".equals(password)){
             //密码错误
             throw new IncorrectCredentialsException();
         }
