@@ -1,4 +1,4 @@
-package com.nihui.shiro.loginandlogout;
+package com.nihui.shiro.charp01;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;

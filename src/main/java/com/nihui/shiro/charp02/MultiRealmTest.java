@@ -1,4 +1,4 @@
-package com.nihui.shiro.realm;
+package com.nihui.shiro.charp02;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -15,17 +15,18 @@ import org.apache.shiro.util.Factory;
  * @Date 2019/10/28 10:59 AM
  * @Created by nihui
  */
-public class SRealeTest {
+public class MultiRealmTest {
     public static void main(String[] args) {
         //1、获取SecurityManager工厂，
-        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
+        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-multi-realm.ini");
         //2、得到一个SecurityManager实例，绑定到SecurityUtils
         SecurityManager securityManager = factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
 
         //得到Subject 以及用户名密码的身份验证Token
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken("nihui","123");
+        UsernamePasswordToken token = new UsernamePasswordToken("nihui","1234");
+//        UsernamePasswordToken token = new UsernamePasswordToken("admin","123");
         // 验证登陆
 
         try {

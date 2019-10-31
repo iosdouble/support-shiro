@@ -1,4 +1,4 @@
-package com.nihui.shiro.realm;
+package com.nihui.shiro.charp02;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;

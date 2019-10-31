@@ -1,4 +1,4 @@
-package com.nihui.shiro.realm.realmconfig;
+package com.nihui.shiro.charp02.realmconfig;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
